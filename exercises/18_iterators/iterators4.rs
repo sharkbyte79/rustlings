@@ -10,6 +10,10 @@ fn factorial(num: u64) -> u64 {
     // - additional variables
     // For an extra challenge, don't use:
     // - recursion
+
+    let r = 2..=num; // range implements Iterator trait
+    // if r is 2..0 or 2..1, it will be empty and defer to the init 1 (0! = 1, 1! = 1)
+    r.fold(1, |acc, x| acc * x)
 }
 
 fn main() {
