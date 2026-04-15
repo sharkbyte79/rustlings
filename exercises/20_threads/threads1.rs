@@ -24,6 +24,9 @@ fn main() {
     for handle in handles {
         // TODO: Collect the results of all threads into the `results` vector.
         // Use the `JoinHandle` struct which is returned by `thread::spawn`.
+        // for each join handle returned by a spawned thread, we use join to stall until it's
+        // finished executing and consume it's result
+        results.push(handle.join().unwrap());
     }
 
     if results.len() != 10 {
