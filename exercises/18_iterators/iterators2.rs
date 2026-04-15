@@ -1,8 +1,6 @@
 // In this exercise, you'll learn some of the unique advantages that iterators
 // can offer.
 
-use std::char;
-
 // TODO: Complete the `capitalize_first` function.
 // "hello" -> "Hello"
 fn capitalize_first(input: &str) -> String {
